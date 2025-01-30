@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souvik Ghosh - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <div class="menu-btn" id="menuBtn">
+        <div class="menu-btn__burger"></div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Menu</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#" id="projects-menu"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#" id="chatbot-menu"><i class="fas fa-comment"></i> Chat Assistant</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-logo">SG</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="Souvik Ghosh">Souvik Ghosh</h1>
+            <p class="typing-text">Full Stack Developer</p>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <p>Explore More</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hello! I'm Souvik Ghosh, a  developer born on December 12, 2013.</p>
+                <p>I love creating interactive and engaging websites using modern technologies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card" data-skill="Python">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+                <div class="skill-level"></div>
+            </div>
+            <div class="skill-card" data-skill="HTML">
+                <i class="fab fa-html5"></i>
+                <h3>HTML</h3>
+                <div class="skill-level"></div>
+            </div>
+            <div class="skill-card" data-skill="CSS">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <div class="skill-level"></div>
+            </div>
+            <div class="skill-card" data-skill="JavaScript">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <div class="skill-level"></div>
+            </div>
+            <div class="skill-card" data-skill="React">
+                <i class="fab fa-react"></i>
+                <h3>React JS</h3>
+                <div class="skill-level"></div>
+            </div>
+            <div class="skill-card" data-skill="SQL">
+                <i class="fas fa-database"></i>
+                <h3>SQL</h3>
+                <div class="skill-level"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Modal -->
+    <div id="projects-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>File Sharing Website</h3>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Python (Flask)</span>
+                    </div>
+                    <p>A web application that allows users to securely share files online.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Mini Minecraft Clone</h3>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Ursina Engine</span>
+                    </div>
+                    <p>A simplified version of Minecraft built using the Ursina game development engine.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <p>A modern, animated portfolio website showcasing my skills and projects.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>TO-DO List</h3>
+                    <div class="tech-stack">
+                        <span>React JS</span>
+                    </div>
+                    <p>A dynamic task management application built with React JS.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chatbot-container">
+        <button id="chatbot-toggle" class="chatbot-button">
+            <i class="fas fa-comment"></i>
+        </button>
+        
+        <div id="chatbot-box" class="chatbot-box">
+            <div class="chatbot-header">
+                <h3>Chat Assistant</h3>
+                <button id="chatbot-close">×</button>
+            </div>
+            <div id="chatbot-messages" class="chat-messages">
+                <div class="bot-message">
+                    Hello! Here are the available commands:
+                    <ul>
+                        <li>1. Skills - Shows my skills</li>
+                        <li>2. Info - Shows my information</li>
+                        <li>3. Projects - Shows my top projects</li>
+                        <li>4. Exit - Exits this chatbot</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatbot-input" placeholder="Type a command...">
+                <button id="chatbot-send">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer credit -->
+    <div class="footer-credit">
+        <p class="burning-text glitch-text" data-text="MADE BY SOUVIK GHOSH">MADE BY SOUVIK GHOSH</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Sidebar functionality
+            const menuBtn = document.getElementById('menuBtn');
+            const sidebar = document.getElementById('sidebar');
+            const chatbotMenu = document.getElementById('chatbot-menu');
+            let menuOpen = false;
+
+            menuBtn.addEventListener('click', () => {
+                if(!menuOpen) {
+                    menuBtn.classList.add('open');
+                    sidebar.classList.add('open');
+                    menuOpen = true;
+                } else {
+                    menuBtn.classList.remove('open');
+                    sidebar.classList.remove('open');
+                    menuOpen = false;
+                }
+            });
+
+            // Close sidebar when clicking outside
+            document.addEventListener('click', (e) => {
+                if (menuOpen && !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+                    menuBtn.classList.remove('open');
+                    sidebar.classList.remove('open');
+                    menuOpen = false;
+                }
+            });
+
+            // Projects Modal functionality
+            const projectsMenu = document.getElementById('projects-menu');
+            const projectsModal = document.getElementById('projects-modal');
+            const closeModal = document.querySelector('.close-modal');
+
+            projectsMenu.addEventListener('click', (e) => {
+                e.preventDefault();
+                projectsModal.style.display = 'block';
+                // Close sidebar when opening projects
+                menuBtn.classList.remove('open');
+                sidebar.classList.remove('open');
+                menuOpen = false;
+            });
+
+            closeModal.addEventListener('click', () => {
+                projectsModal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === projectsModal) {
+                    projectsModal.style.display = 'none';
+                }
+            });
+
+            // Chatbot menu item click handler
+            chatbotMenu.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleChatbox();
+                // Close sidebar after clicking chatbot option
+                menuBtn.classList.remove('open');
+                sidebar.classList.remove('open');
+                menuOpen = false;
+            });
+        });
+    </script>
+    <style>
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .chatbot-button {
+            width: 60px;
+            height: 60px;
+            background: #64ffda;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .chatbot-button:hover {
+            transform: scale(1.1);
+        }
+
+        .chatbot-button i {
+            font-size: 24px;
+            color: #0a192f;
+        }
+
+        .chatbot-box {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 300px;
+            height: 400px;
+            background: rgba(10, 25, 47, 0.95);
+            border: 1px solid #64ffda;
+            border-radius: 10px;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .chatbot-header {
+            padding: 15px;
+            background: rgba(100, 255, 218, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #64ffda;
+        }
+
+        .chatbot-header h3 {
+            color: #64ffda;
+            margin: 0;
+        }
+
+        .chatbot-header button {
+            background: none;
+            border: none;
+            color: #64ffda;
+            cursor: pointer;
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        .bot-message, .user-message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 80%;
+        }
+
+        .bot-message {
+            background: rgba(100, 255, 218, 0.1);
+            color: #fff;
+            margin-right: auto;
+        }
+
+        .bot-message ul {
+            margin: 10px 0 0 20px;
+            padding: 0;
+        }
+
+        .bot-message li {
+            margin-bottom: 5px;
+        }
+
+        .user-message {
+            background: rgba(100, 255, 218, 0.2);
+            color: #64ffda;
+            margin-left: auto;
+        }
+
+        .chat-input {
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+            border-top: 1px solid #64ffda;
+        }
+
+        .chat-input input {
+            flex-grow: 1;
+            padding: 8px;
+            border: 1px solid #64ffda;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .chat-input button {
+            background: #64ffda;
+            border: none;
+            border-radius: 5px;
+            width: 40px;
+            color: #0a192f;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .chat-input button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get DOM elements for chatbot
+            const toggleButton = document.getElementById('chatbot-toggle');
+            const closeButton = document.getElementById('chatbot-close');
+            const chatbox = document.getElementById('chatbot-box');
+            const input = document.getElementById('chatbot-input');
+            const sendButton = document.getElementById('chatbot-send');
+            const messagesContainer = document.getElementById('chatbot-messages');
+
+            // Toggle chatbox function
+            function toggleChatbox() {
+                const isVisible = chatbox.style.display === 'flex';
+                chatbox.style.display = isVisible ? 'none' : 'flex';
+                if (!isVisible) {
+                    input.focus();
+                }
+            }
+
+            // Add message to chat
+            function addMessage(content, isUser = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = isUser ? 'user-message' : 'bot-message';
+                messageDiv.textContent = content;
+                messagesContainer.appendChild(messageDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+
+            // Handle command
+            function handleCommand(command) {
+                const cmd = command.toLowerCase().trim();
+                let response = '';
+
+                switch(cmd) {
+                    case '1':
+                    case 'skills':
+                        response = 'Skills: Python, HTML, CSS, JavaScript, React JS, Basic SQL';
+                        break;
+                    case '2':
+                    case 'info':
+                        response = 'Souvik Ghosh, born December 12, 2003. Software Development (2022-2024)';
+                        break;
+                    case '3':
+                    case 'projects':
+                        response = 'Projects: File Sharing Website, Mini Minecraft Clone, Portfolio Website, TO-DO List';
+                        break;
+                    case '4':
+                    case 'exit':
+                        toggleChatbox();
+                        return;
+                    default:
+                        response = 'Unknown command. Try: 1.Skills, 2.Info, 3.Projects, 4.Exit';
+                }
+                addMessage(response);
+            }
+
+            // Send message
+            function sendMessage() {
+                const message = input.value.trim();
+                if (message) {
+                    addMessage(message, true);
+                    handleCommand(message);
+                    input.value = '';
+                }
+            }
+
+            // Event listeners for chatbot
+            toggleButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleChatbox();
+            });
+
+            closeButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleChatbox();
+            });
+
+            sendButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                sendMessage();
+            });
+
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+
+            // Initialize chatbox as hidden
+            chatbox.style.display = 'none';
+
+            // Make toggleChatbox available for menu
+            window.toggleChatbox = toggleChatbox;
+        });
+    </script>
+</body>
+</html> 
